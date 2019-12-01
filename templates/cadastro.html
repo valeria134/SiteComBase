@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+</br> </br> </br>
+		<img src="{{url_for('static', filename='images/cadastro/CadastrarBackground.jpg')}}"  id="FacaOcadastro">
+		<div id="BackgroundCadastro">
+		<form id="forum">
+			<br></br></br></br>
+		 <form method="POST">
+    {{formulario.hidden_tag()}}
+    {{formulario.name.label}}:  {{formulario.name}}
+	{{formulario.hidden_tag()}}
+    {{formulario.email.label}}:  {{formulario.email}}
+	{{formulario.hidden_tag()}}
+    {{formulario.senha.label}}:  {{formulario.senha}}
+	{{formulario.hidden_tag()}}
+    {{formulario.confirm.label}}:  {{formulario.confirm}}
+	</br>
+	<button class ="btn-large waves-effect waves-dark" style="width:100%" type="submit" onclick="return validar()">Cadastrar</button>
+    <br>  
+</form>  
+{% endblock %}
