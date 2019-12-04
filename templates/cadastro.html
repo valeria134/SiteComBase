@@ -8,13 +8,14 @@
 			<br></br></br></br>
 		 <form method="POST">
     {{formulario.hidden_tag()}}
-    {{formulario.name.label}}:  {{formulario.name}}
+    {{formulario.usuario.label}}:  {{formulario.usuario}}
 	{{formulario.hidden_tag()}}
     {{formulario.email.label}}:  {{formulario.email}}
 	{{formulario.hidden_tag()}}
     {{formulario.senha.label}}:  {{formulario.senha}}
 	{{formulario.hidden_tag()}}
-    {{formulario.confirm.label}}:  {{formulario.confirm}}
+	{{formulario.confirm.label}}:  {{formulario.confirm}}
+    {{formulario.submit}}
 	</br>
 	<button class ="btn-large waves-effect waves-dark" style="width:100%" type="submit" onclick="return validar()">Cadastrar</button>
     <br>  
