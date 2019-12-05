@@ -7,17 +7,18 @@
 		<form id="forum">
 			<br></br></br></br>
 		 <form method="POST">
-    {{formulario.hidden_tag()}}
-    {{formulario.usuario.label}}:  {{formulario.usuario}}
-	{{formulario.hidden_tag()}}
-    {{formulario.email.label}}:  {{formulario.email}}
-	{{formulario.hidden_tag()}}
-    {{formulario.senha.label}}:  {{formulario.senha}}
-	{{formulario.hidden_tag()}}
-	{{formulario.confirm.label}}:  {{formulario.confirm}}
-    {{formulario.submit}}
+		{{formulario.hidden_tag()}}
+	<div class="form-group">
+		{{formulario.usuario.label}}:  {{formulario.usuario}}
+  	</div>
+  	<div class="form-group">
+		{{formulario.email.label}}:  {{formulario.email}}
+  	</div>
+  	<div class="form-group">
+		{{formulario.password.label}}:  {{formulario.password}}
+  	</div>
+	  {{formulario.submit}}
 	</br>
-	<button class ="btn-large waves-effect waves-dark" style="width:100%" type="submit" onclick="return validar()">Cadastrar</button>
-    <br>  
+	
 </form>  
 {% endblock %}

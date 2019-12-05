@@ -25,11 +25,12 @@ def home():
 @app.route('/cadastro', methods=["GET", "POST"])
 def Cadastro():
     formulario=CadastroForm()
-    if request.method == 'POST':
-        user = User()
-        user.usuario = request.form['usuario']
-        user.email = request.form['email']
-        user.senha = request.form['senha']
+    if formulario.validate_on_submit():
+        usuario = formulario.usuario.data
+        email = formulario.email.data
+        password = formulario.password.data
+
+        user = User (usuario=usuario, email=email, password=password)
         db.session.add(user)
         db.session.commit()
 

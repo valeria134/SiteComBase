@@ -3,12 +3,11 @@ from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Email, EqualTo
 
 class CadastroForm(FlaskForm):
-    usuario= StringField("Usuario", validators= [DataRequired()])
-    email= StringField("Email", validators= [DataRequired(),Email()])
-    senha= PasswordField("Senha",[DataRequired(),EqualTo('confirm',message='Senhas diferentes')])
-    confirm= PasswordField('Repita a senha')
+    usuario = StringField("Usuario", validators= [DataRequired()])
+    email = StringField("Email", validators= [DataRequired(),Email()])
+    password = PasswordField("Senha",[DataRequired(),EqualTo('confirm',message='Senhas diferentes')])
+    confirm = PasswordField('Repita a senha')
     submit = SubmitField('Cadastrar')
-    
 
 
 class LoginForm(FlaskForm):
